@@ -1,7 +1,6 @@
 import base64
 import hashlib
 
-from django.shortcuts import render
 from django.http import JsonResponse
 
 from hashgen.models import get_next_num
@@ -18,7 +17,7 @@ def next_num(request):
     hash_digest = hash_object.digest()
     short_url_byte = base64.urlsafe_b64encode(hash_digest)[:13]   
     short_url = short_url_byte.decode('utf-8')
-
     return JsonResponse({'hash': short_url})
+
 
 

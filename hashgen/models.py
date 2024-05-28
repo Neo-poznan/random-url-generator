@@ -11,3 +11,7 @@ def get_next_num():
         cursor.execute("SELECT nextval('num_for_gen')")
         result = cursor.fetchone()
         return result[0]
+    
+
+class ReadyUrls(models.Model):
+    hash = models.CharField(max_length=13)

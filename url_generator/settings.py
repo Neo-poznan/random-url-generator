@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-hdsqz2wq!uph4s$qcr2hj8y%c@2u)nl2-w*ue+lw)b2$^1d^5j'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -71,7 +71,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'url_generator.wsgi.application'
 
-
+ASGI_APPLICATION = 'myproject.asgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
@@ -86,9 +86,9 @@ WSGI_APPLICATION = 'url_generator.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'база данных',
-        'USER': 'юзер',
-        'PASSWORD': 'пароль',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
         'HOST': '127.0.0.1', # стандартные настройки локалхоста
         'PORT': '5432',
     }
