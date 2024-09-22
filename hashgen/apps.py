@@ -7,6 +7,6 @@ class HashgenConfig(AppConfig):
 
     def ready(self) -> None:
         import threading
-        from .url_generating import start_generating
-        threading.Thread(target=start_generating).start()
+        from .url_generating import url_generation_loop
+        threading.Thread(target=url_generation_loop).start()
         
