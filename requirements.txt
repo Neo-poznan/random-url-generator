@@ -1,0 +1,4 @@
+django==4.2
+psycopg2
+redis==5.0.8
+asgiref
