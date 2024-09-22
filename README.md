@@ -17,9 +17,10 @@
 1. Создать директорию и в нее поместить репозиторий.
 2. В settings.py указать значения READY_URLS_LIST_LIMIT REDIS_CHECK_TIMEOUT
 3. Подготовить базу данных для проекта создать роль и базу
-4. Заполнить DATABASES в settings.py 
-5. Открыть директорию в терминале и прописать `python3.12 -m venv env`
-6. `source env/bin/activate`
-7. `cd random-url-generator/`
-8. `pip install -r requirements.txt`
-9. `python3.12 manage.py runserver` 
+4. Выполнить в базе запрос из первой функции в models.py
+5. Заполнить DATABASES в settings.py 
+6. Открыть директорию в терминале и прописать `python3.12 -m venv env`
+7. `source env/bin/activate`
+8. `cd random-url-generator/`
+9. `pip install -r requirements.txt`
+10. `python3.12 manage.py runserver` 

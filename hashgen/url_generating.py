@@ -17,7 +17,6 @@ async def url_generation_loop() -> None:
     '''
     client = redis.Redis(REDIS_HOST, REDIS_PORT)
     while True:
-        print('проверка наличия хэшей', client.llen('urls'))
         if client.llen('urls') < READY_URLS_LIST_LIMIT:
             await list_filing_loop()
         time.sleep(REDIS_CHECK_TIMEOUT)
@@ -28,7 +27,6 @@ async def list_filing_loop() -> None:
     Вызывает функцию генерации хэша и добавляет его в кэш пока список
     не заполнится по указанную отметку    
     '''
-    print('пополняем кэш')
     client = redis.Redis(REDIS_HOST, REDIS_PORT)
     while client.llen('urls') < READY_URLS_LIST_LIMIT:
         url_hash: str = await generate()
